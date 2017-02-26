@@ -15,7 +15,7 @@ lazy val marshaller =
 
 ```
 
-
+Then in your project: 
 
 ```scala
 
