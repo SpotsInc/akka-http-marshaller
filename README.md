@@ -30,6 +30,17 @@ object SomeRoute extends Marshaller {
 
 ```
 
+### Supported Entities
+
+This package can help marshalling
+
+1. ``java.util.UUID``
+2. ``java.util.Date``
+3. ``org.joda.time.Datetime``
+
+
+
+----
 
 **Note:**  this project will be added to Maven soon
 
