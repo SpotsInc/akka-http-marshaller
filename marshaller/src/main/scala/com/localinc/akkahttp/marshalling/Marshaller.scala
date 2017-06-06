@@ -1,4 +1,4 @@
-package com.localinc.akkahttp.marshalling
+package com.spotsinc.akkahttp.marshalling
 
 import java.text.{ParseException, SimpleDateFormat}
 import java.util.{Date, UUID}
@@ -22,7 +22,7 @@ trait Marshaller extends Directives with SprayJsonSupport with DefaultJsonProtoc
   }
 
   implicit object DateTimeFormat extends JsonFormat[DateTime] {
-    override def write(obj: DateTime) : JsValue = JsString(obj.toString("yyyy-MM-dd"))
+    override def write(obj: DateTime) : JsValue = JsString(obj.toString("yyyy-MM-dd'T'HH:mm:ss.SSSZ"))
 
     override def read(json: JsValue) : DateTime = json match {
       case JsString(rawDate) => {

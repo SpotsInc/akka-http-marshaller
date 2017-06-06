@@ -4,16 +4,16 @@ import sbt.Keys._
 import ohnosequences.sbt._
 
 lazy val commonSettings = Seq(
-  organization := "com.localinc.akkhttp.marshaller",
-  version := "0.0.1",
+  organization := "com.spotsinc.akkhttp.marshaller",
+  version := "0.0.2",
   scalaVersion := "2.11.8",
   fork in run := true,
   parallelExecution in ThisBuild := false,
   parallelExecution in Test := false,
   ghreleaseNotes := {
-    tagName => tagName.repr + " first release"
+    tagName => tagName.repr + " fixed datetime iso8601 conversion"
   },
-  ghreleaseRepoOrg := "LocalInc"
+  ghreleaseRepoOrg := "SpotsInc"
 )
 
 
@@ -28,7 +28,7 @@ lazy val versions = new {
 lazy val marshaller = project.in(file("marshaller")).
   settings(commonSettings: _*).
   settings(
-    name := "localinc-akka-http-marshaller",
+    name := "spotsinc-akka-http-marshaller",
     libraryDependencies ++= Seq(
       "com.typesafe.akka" %% "akka-http-core" % versions.akkaHttpCore,
       "com.typesafe.akka" %% "akka-http" % versions.akkaHttp,
