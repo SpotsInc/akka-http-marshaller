@@ -28,7 +28,7 @@ lazy val versions = new {
 lazy val marshaller = project.in(file("marshaller")).
   settings(commonSettings: _*).
   settings(
-    name := "spotsinc-akka-http-marshaller",
+    name := "akka-http-marshaller",
     libraryDependencies ++= Seq(
       "com.typesafe.akka" %% "akka-http-core" % versions.akkaHttpCore,
       "com.typesafe.akka" %% "akka-http" % versions.akkaHttp,
