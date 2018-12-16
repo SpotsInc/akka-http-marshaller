@@ -9,7 +9,7 @@ In your `build.sbt` add the marshaller as a project
 ```scala
 
 lazy val marshaller =
-  ProjectRef(uri("https://github.com/LocalInc/akka-http-marshaller.git#0.0.1"), "marshaller")
+  ProjectRef(uri("https://github.com/LocalInc/akka-http-marshaller.git#v0.1.3"), "marshaller")
   
 // add marshaller as a dependency to your project with .dependsOn(marshaller)
 
